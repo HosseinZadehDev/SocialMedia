@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   background-color: #070707;
+    font-family: kalameh;
+}
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 300%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInUp {
+    animation-name: fadeInUp;
+  }
+
+.total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.total .icon{
+    position: relative;
+    border-radius: 50%;
+    padding: 35px;
+    margin: 17px;
+    width: 60px;
+    height: 60px;
+    font-size: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.total .icon i{
+    color: #fff;
+    transition: .5s linear;
+}
+.total:hover .tool-name{
+    opacity: 1;
+    animation-name: fadeInUp ;
+    animation-duration: 3s;
+}
+.total:hover .icon i{
+    color: #ffd500;
+}
+.total .tool-name{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffd500;
+    font-size: 18px;
+}
+.total .icon::before,.total .icon::after{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    transition: .5s linear;
+    
+}
+.total .icon:hover::before{
+    border-radius: 50%;
+    border-left: 4px solid;
+    border-right: 4px solid;
+    transform: skewX(20deg);
+    color: #ffd500;
+}
+.total .icon:hover::after{
+    border-radius: 50%;
+    border-top: 4px solid ;
+    border-bottom: 4px solid ;
+    transform: skewY(-20deg);
+    color: #ffd500;
+}
+.footer{
+    width: 100%;
+    background: #121215;
+    position: fixed;
+    border-top: 4px solid #ffcb0a;
+    height: 56px;
+    bottom: 0px;
+  }
+  .footer h3{
+    font-size: 1.3em;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 8px;
+  }
